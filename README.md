@@ -4,4 +4,10 @@ Rhetorical Structure Theory (RST) and relational propositions can be used to def
 
 The logic of relational propositions is an intentional logic.
 
-Andrew Potter. 2019. Reasoning between the lines: A logic of relational propositions. Dialogue and Discourse, 9(2), 80-110. 
+Potter, A. (2019). Reasoning between the lines: A logic of relational propositions. _Dialogue and Discourse_, 9(2), 80-110. 
+
+Potter, A. (2020). The rhetorical structure of Modus Tollens: An exploration in logic-mining. In A. Ettinger, E. Pavlich, & B. Prickett (Eds.), _Proceedings of the Society for Computation in Linguistics_ (Vol. 3, pp. 170-179). SCiL. 
+
+Potter, A. (2022). Inferring Inferences: Relational Propositions for Argument Mining. In _Proceedings of the Society for Computation in Linguistics_ (Vol. 5, pp. 89-100). The Society for Computation in Linguistics. 
+
+Potter, A. (2023). Text as tautology: an exploration in inference, transitivity, and logical compression. _Text & Talk_, 43(4), 471-503. 
