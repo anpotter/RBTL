@@ -1,8 +1,12 @@
-# Andrew Potter. 2019.
-# Reasoning between the lines: A logic of relational propositions.
-# Dialogue and Discourse, 9(2), 80-110. 
-# https://journals.uic.edu/ojs/index.php/dad/article/view/10690
-
+# Automating logical reductions
+# Rover: reasoning over rhetorical structures
+'''
+For unrealized concession(evidence(p,q),r)
+even if we know that p and q
+we cannot infer r
+because we do not accept the relations among p and q and r
+ ((¬((¬(((p → q) ∧ p) → ¬r) → r) ∧ ¬(((p → q) ∧ p) → ¬r)) ∧ (p ∧ q)) → r)
+'''
 
 # basics
 def neg(p):     return f'¬{p}'
@@ -15,7 +19,6 @@ def meq(p,q):    return conj((mimp(p,q),mimp(q,p)))
 # realized 
 def mp(p,q):    return f'{mimp(conj((mimp(p,q),p)),q)}'
 def djs(p,q): return mimp(conj((disj((p,q)),neg(p))),q)
-
 #unrealized
 #def mp(p,q):    return f'{conj((mimp(p,q),p))}'
 #def djs(p,q): return conj((disj((p,q)),neg(p)))
@@ -48,7 +51,7 @@ def summary(s,n):       return mp(s,n)
 def unconditional(s,n): return conj((n,neg(mimp(s,neg(n)))))
 def unless(s,n):        return exdisj(s,n)
 def volitional_cause(s,n):  return(cause(s,n))
-def volitional_result(s,n): return(cause(n,s))
+def volitional_result(s,n): return(cause(s,n))
 
 def contrast(s,n):      return exdisj(s,n)
 def conjunction(*args): return conj(args)
@@ -61,7 +64,9 @@ def sequence(*args):    return conj(args)
 def convergence(*args): return conj(args)
 
 if __name__ == "__main__":
-    print('unlazy')
-    print(background(volitional_result(1,circumstance(3,2)),evidence(concession(5,antithesis(7,6)),4)))
-
+    print('tax program')
+    print(evidence(cause(2,3),1))
+    print()
+    print('common cause')
+    print(motivation(evidence(evidence(justify(10,antithesis(concession(11,12),13)),antithesis(evidence(condition(4,circumstance(6,5)),concession(2,3)),elaboration(9,condition(8,7)))),1),14))
 
