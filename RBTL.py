@@ -1,12 +1,5 @@
 # Automating logical reductions
 # Rover: reasoning over rhetorical structures
-'''
-For unrealized concession(evidence(p,q),r)
-even if we know that p and q
-we cannot infer r
-because we do not accept the relations among p and q and r
- ((¬((¬(((p → q) ∧ p) → ¬r) → r) ∧ ¬(((p → q) ∧ p) → ¬r)) ∧ (p ∧ q)) → r)
-'''
 
 # basics
 def neg(p):     return f'¬{p}'
@@ -65,7 +58,10 @@ def convergence(*args): return conj(args)
 
 if __name__ == "__main__":
     print('tax program')
-    print(evidence(cause(2,3),1))
+    print(evidence(
+cause(
+2,3),1)
+)
     print()
     print('common cause')
     print(motivation(evidence(evidence(justify(10,antithesis(concession(11,12),13)),antithesis(evidence(condition(4,circumstance(6,5)),concession(2,3)),elaboration(9,condition(8,7)))),1),14))
