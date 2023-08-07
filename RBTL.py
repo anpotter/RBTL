@@ -1,6 +1,7 @@
-# Automating logical reductions
-# RBTL: Reasoning between the lines
-# AKA Rover: Reasoning over rhetorical structures
+# Andrew Potter. 2019.
+# Reasoning between the lines: A logic of relational propositions.
+# Dialogue and Discourse, 9(2), 80-110. 
+# https://journals.uic.edu/ojs/index.php/dad/article/view/10690
 
 # basics
 def neg(p):     return f'¬{p}'
